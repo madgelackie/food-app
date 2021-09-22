@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title> {{ title }} - My Orders</title>
+    </head>
+    <body>
+        <h1>Our Food Orders</h1>
+        {% for order in orders %}
+        <div>
+            <p>
+                <a href="/orders/{{orders.index(order)}}">
+                <b>{{ order.customer_name }}</b>: {{ order.order_date}} {{ order.quantity}}
+                {{ order.food_item}}
+                </a>             
+            </p>
+        </div>
+        {% endfor %}
+    </body>
+</html>
